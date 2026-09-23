@@ -64,6 +64,8 @@ jobs:
           flake8 app tests
 
       - name: Run unit tests
+      env:
+        PYTHONPATH: .
         run: |
           pytest tests --verbose
 
